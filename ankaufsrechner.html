@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>GrayScaleWebseite</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Details-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive"><img src="assets/img/Logo_Ring.png" width="247" height="114">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item nav-link"><a class="nav-link" href="index.html" style="color: var(--bs-gray-500);">Hauptseite</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav><!doctype html>
+<html lang="de">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css" rel="stylesheet">
+<br><br><br><br><br><br><br><br>
+    <title>Ankaufsrechner</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="my-4">Ankaufsrechner</h1>
+
+      <div class="mb-3">
+        <label for="gold999" class="form-label">999er Gold (Gramm)</label>
+        <input type="number" class="form-control" id="gold999" placeholder="0">
+      </div>
+       <div class="col">
+          <label for="gold585" class="form-label">585er Gold</label>
+          <input type="number" class="form-control" id="gold585" placeholder="0">
+        </div>
+        <div class="col">
+          <label for="gold333" class="form-label">333er Gold</label>
+          <input type="number" class="form-control" id="gold333" placeholder="0">
+        </div>
+        <div class="col">
+          <label for="silver999" class="form-label">Silber 999</label>
+          <input type="number" class="form-control" id="silver999" placeholder="0">
+        </div>
+        <div class="col">
+          <label for="silver925" class="form-label">Silber 925</label>
+          <input type="number" class="form-control" id="silver925" placeholder="0">
+        </div>
+        <div class="col">
+          <label for="silver830" class="form-label">Silber 830</label>
+          <input type="number" class="form-control" id="silver830" placeholder="0">
+        </div>
+        <div class="col">
+          <label for="silver800" class="form-label">Silber 800</label>
+          <input type="number" class="form-control" id="silver800" placeholder="0">
+        </div>
+      </div>
+      <!-- Repeat the above for all other types -->
+
+      <button type="button" class="btn btn-primary mt-3" onclick="calculate()">Berechnen</button>
+      <button type="button" class="btn btn-secondary mt-3" onclick="resetValues()">Zurücksetzen</button>
+
+      <div class="my-3">
+        <label for="result" class="form-label">Ergebnis</label>
+        <input type="text" class="form-control" id="result" readonly style="font-size: 2rem;">
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+function calculate() {
+    const goldPrice = 59.59;
+    const silverPrice = 0.71;
+
+    const gold999 = (parseFloat(document.getElementById('gold999').value) || 0) * goldPrice;
+    const gold585 = (parseFloat(document.getElementById('gold585').value) || 0) * goldPrice * 0.585;
+    const gold333 = (parseFloat(document.getElementById('gold333').value) || 0) * goldPrice * 0.333;
+    const silver999 = (parseFloat(document.getElementById('silver999').value) || 0) * silverPrice;
+    const silver925 = (parseFloat(document.getElementById('silver925').value) || 0) * silverPrice * 0.925;
+    const silver830 = (parseFloat(document.getElementById('silver830').value) || 0) * silverPrice * 0.830;
+    const silver800 = (parseFloat(document.getElementById('silver800').value) || 0) * silverPrice * 0.800;
+
+    const total = gold999 + gold585 + gold333 + silver999 + silver925 + silver830 + silver800;
+    const totalWithCommission = total * 0.9;
+
+    document.getElementById('result').value = totalWithCommission.toFixed(2);
+}
+
+function resetValues() {
+    document.getElementById('gold999').value = '';
+    document.getElementById('gold585').value = '';
+    document.getElementById('gold333').value = '';
+    document.getElementById('silver999').value = '';
+    document.getElementById('silver925').value = '';
+    document.getElementById('silver830').value = '';
+    document.getElementById('silver800').value = '';
+    document.getElementById('result').value = '';
+}
+</script>
+  </body>
+</html>
+
+    <section></section>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+</body>
+
+</html>
